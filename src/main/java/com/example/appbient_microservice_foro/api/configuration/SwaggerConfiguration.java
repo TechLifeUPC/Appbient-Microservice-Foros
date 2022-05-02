@@ -20,15 +20,15 @@ public class SwaggerConfiguration {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.appbient.api.controllers"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.appbient_microservice_foro.api.controllers"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo(){
         return new ApiInfo(
-                "Appbient API",
-                "Trabajo para Fundamentos de arquitectura de software",
+                "Appbient API - Microservice Foro",
+                "Microservicio de foro de Appbient",
                 "1.0",
                 "Terminos y Condiciones:",
                 new Contact("", "", ""),

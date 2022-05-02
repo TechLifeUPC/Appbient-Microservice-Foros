@@ -22,12 +22,12 @@ public class PublicacionForoController {
     private PublicacionForoMapper mapper;
 
     @GetMapping
-    public Page<PublicacionForoResource> getAllPublicacionForos(Pageable pageable){
+    public Page<PublicacionForoResource> getAllPublicacions(Pageable pageable){
         return mapper.modelListToPage(PublicacionForoService.getAll(), pageable);
     }
 
     @GetMapping("/{id}")
-    public PublicacionForoResource getPublicacionForoById(@PathVariable Long id){
+    public PublicacionForoResource getPublicacionById(@PathVariable Long id){
         return mapper.toResource(PublicacionForoService.getById(id));
     }
 
